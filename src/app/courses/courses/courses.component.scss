@@ -1,0 +1,16 @@
+.loading-spinner{
+  background-color: rgb(105, 105, 105);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+mat-card{
+  max-width: 80%;
+  margin: 2em auto;
+  text-align: center;
+}
+.column-flex{
+  display: flex;
+  flex-direction: column;
+}
