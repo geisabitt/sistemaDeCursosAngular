@@ -2,24 +2,24 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { first, tap } from 'rxjs';
 
-import { Curso } from '../model/Curso';
+import { Course } from '../model/course';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CoursesService {
-  private readonly API = 'api/cursos';
+  private readonly API = 'api/courses';
   constructor(private httpClient: HttpClient) {}
 
   list() {
-    return this.httpClient.get<Curso[]>(this.API).pipe(
+    return this.httpClient.get<Course[]>(this.API).pipe(
       first(),
       //delay(5000),
-      tap((cursos) => console.log(cursos))
+      tap((courses) => console.log(courses))
     );
   }
 
-  save(record: Curso) {
-    return this.httpClient.post<Curso>(this.API, record);
+  save(record: Partial<Course>) {
+    return this.httpClient.post<Course>(this.API, record);
   }
 }

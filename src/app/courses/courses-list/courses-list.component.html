@@ -2,46 +2,24 @@
   <!--- Note that these columns can be defined in any order.
   The actual rendered columns are set as a property on the row definition" -->
 
-  <!-- Nome Column -->
-  <ng-container matColumnDef="nome">
-    <mat-header-cell *matHeaderCellDef>Nome</mat-header-cell>
+  <!-- name Column -->
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef>name</mat-header-cell>
     <mat-cell *matCellDef="let course">
-      {{ course.nome }}
+      {{ course.name }}
     </mat-cell>
   </ng-container>
 
-  <!-- Nome Column -->
-  <ng-container matColumnDef="tipo">
-    <mat-header-cell *matHeaderCellDef>Tipo</mat-header-cell>
-    <mat-cell *matCellDef="let course">
-      {{ course.tipo }}
-    </mat-cell>
-  </ng-container>
-
-  <!-- Nome Column -->
-  <ng-container matColumnDef="descricao">
-    <mat-header-cell *matHeaderCellDef>Descricao</mat-header-cell>
-    <mat-cell *matCellDef="let course">
-      {{ course.descricao }}
-    </mat-cell>
-  </ng-container>
-
-  <!-- Nome Column -->
-  <ng-container matColumnDef="valor">
-    <mat-header-cell *matHeaderCellDef>Valor</mat-header-cell>
-    <mat-cell *matCellDef="let course"> R$ {{ course.valor }} </mat-cell>
-  </ng-container>
-
-  <!-- Descrição Column
+  <!-- Descrição Column -->
   <ng-container matColumnDef="category">
     <mat-header-cell *matHeaderCellDef>Categoria</mat-header-cell>
     <mat-cell *matCellDef="let course">
-      {{ course.descricao }}
+      {{ course.category }}
       <mat-icon aria-hidden="false" aria-label="Categoria do Curso">{{
-        course.descricao | category
+        course.category | category
       }}</mat-icon>
     </mat-cell>
-  </ng-container>-->
+  </ng-container>
 
   <!-- Ações Column -->
   <ng-container matColumnDef="actions">

@@ -4,7 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { catchError, Observable } from 'rxjs';
 
 import { ErrorDialogComponent } from '../../shared/components/error-dialog/error-dialog.component';
-import { Curso } from '../model/Curso';
+import { Course } from '../model/course';
 import { CoursesService } from './../services/courses.service';
 
 @Component({
@@ -13,7 +13,7 @@ import { CoursesService } from './../services/courses.service';
   styleUrls: ['./courses.component.scss'],
 })
 export class CoursesComponent {
-  courses$: Observable<Curso[]>; //ou
+  courses$: Observable<Course[]>; //ou
   //displayedColumns = ['name', 'category', 'actions'];
 
   //coursesService: CoursesService;

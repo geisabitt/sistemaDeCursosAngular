@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { Curso } from '../model/Curso';
+import { Course } from '../model/course';
 
 @Component({
   selector: 'app-courses-list',
@@ -9,8 +9,8 @@ import { Curso } from '../model/Curso';
   styleUrls: ['./courses-list.component.scss'],
 })
 export class CoursesListComponent {
-  @Input() courses: Curso[] = [];
-  readonly displayedColumns = ['nome', 'tipo', 'descricao', 'valor', 'actions'];
+  @Input() courses: Course[] = [];
+  readonly displayedColumns = ['name', 'category', 'actions'];
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
   onAdd() {
